@@ -79,14 +79,22 @@
 <h5> &diams;</h5>
 <a href="https://www.w3spaces-preview.com/superstrona/css3.html">Odnosnik do strony z zadaniem ccs3.</a>
 <p></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "demo.";
+}
+</script>
 <div class="news">
     <a href="#">Lubisz kotki i podoba Ci sie nasza strona?</a>
     <menu>
-        <li><button id="save">Zapisz</button></li>
-        <li><button id="share">Share this news</button></li>
+        <li><button id="demo">Zapisz</button></li>
+        <li><button id="share">Share news</button></li>
     </menu>
 </div>
 
+<p id="demo">shared</p>
+<button type="button" onclick="myFunction()">Try it</button>
 
 
 <span style="font-weight: normal; font-size: 15">
