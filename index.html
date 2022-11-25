@@ -258,7 +258,30 @@ let d = h - f;
 document.getElementById("ode").innerHTML = d;
 </script>
 
+<p>Wpisz ile chcesz mieć w przyszłość koteczków (między 2 a 10)?</p>
 
+<input id="liczba" type="text">
+<button type="button" onclick="myFunction()">testuj</button>
+<p id="p01"></p>
+
+<script>
+function myFunction() {
+  const message = document.getElementById("p01");
+  message.innerHTML = "";
+  let x = document.getElementById("liczba").value;
+  try { 
+    if(x == "")  throw "empty";
+    if(isNaN(x)) throw "not a number";
+    x = Number(x);
+    if(x < 5)  throw "za mało";
+    if(x > 10)   throw "wszyscy kochamy koteczki, ale za dużo";
+  }
+  catch(err) {
+    message.innerHTML = "Input is " + err;
+  }
+}
+</script>
+		
 <footer>
  <p>Autorki: Angelika Slaczalek i Sandra Winkler</p>
  <p>&hearts; &clubs; &hearts; &diams;</p>
